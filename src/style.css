@@ -11,7 +11,6 @@ body {
   overflow: hidden;
   background-position: center center;
   background-attachment: fixed;
-  max-width: 800px;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
   
@@ -25,10 +24,30 @@ body {
 .current-info {
   color: white;
   border: 1px solid white;
-  border-radius: 15px;;
-  margin: 100px 100px;
-  max-width: 600px;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 800px;
+  display: block;
   padding: 20px;
   background: black;
-  opacity:0.7;
+  opacity:0.8; 
+  font-size: 15px;
+  font-weight: 70;
+}
+
+.time {
+  font-size: 40px;
+}
+
+.city {
+  font-size: 40px;
+}
+
+.current-date {
+  font-size:25px ;
+}
+
+.others {
+  padding-top:10px;
 }
