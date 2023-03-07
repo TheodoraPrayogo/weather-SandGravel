@@ -23,12 +23,12 @@ header {
 }  
 
 #city-input {
- margin-left: 500px;
+ margin-left:100px;
 }
 
-#link {
-  text-align: right;
-  color: white;
+.link {
+  text-align: center;
+  
 }
 
 .current-info {
