@@ -19,10 +19,16 @@ header {
   margin: 0 auto;
   padding: 20px; 
   opacity: 0.8;
+ 
 }  
 
-.city-input {
-  justify-content: center;
+#city-input {
+ margin-left: 500px;
+}
+
+#link {
+  text-align: right;
+  color: white;
 }
 
 .current-info {
