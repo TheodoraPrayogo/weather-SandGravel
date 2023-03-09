@@ -27,30 +27,33 @@ header {
 }
 
 .link {
-  text-align: center;
-  
+  text-align: center; 
+  padding: 40px;
 }
 
 .current-info {
   color: white;
   border: 1px solid white;
   border-radius: 15px;
+  display: block;
   margin: 0 auto;
-  margin-top: 40px;
-  max-width: 800px;
+  max-width: 600px;
   box-sizing: border-box;
   background-color: black;
   opacity: 0.8;
   padding: 20px;
 }
  
+.temperature {
+  font-size: 50px;
+}
 
 .time {
-  font-size: 40px;
+  font-size: 15px;
 }
 
 .city {
-  font-size: 40px;
+  font-size: 25px;
 }
 
 .current-date {
