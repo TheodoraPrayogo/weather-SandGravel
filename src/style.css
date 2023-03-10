@@ -43,6 +43,10 @@ header {
   opacity: 0.8;
   padding: 20px;
 }
+
+li {
+  list-style: none;
+}
  
 .temperature {
   font-size: 50px;

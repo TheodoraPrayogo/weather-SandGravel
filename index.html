@@ -37,7 +37,6 @@
                 >
           </div>
            
-          </div>
         </div>
         </div>
         </div> 
@@ -51,21 +50,18 @@
         <div class="row">
           <div class="col-6">
             <div class="date">
-              <div class="temperature" id="temperature"><span id="unit-temperature">°C</span></div>
+              <div class="temperature" id="temperature">
+                <span id="unit-temperature"></span>°C
+              </div>
+
               <div class="current-days" id="current-days">Monday, March 3</div>
-
-              <div class="others" id="current-weather-items">
+              <div class="others">
                 <div class="weather-items">
-                  <div>Rain</div>
-                </div>
-
-                <div class="weather-items">
-                  <div>Humidity : 17%</div>
-                </div>
-
-                <div class="weather-items">
-                  <div>Wind Speed : 17%</div>
-
+                  <ul>
+                <li id="description"></li>    
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -73,10 +69,8 @@
 
           <div class="col-6">
             <div class="place">
-              
-              <div class="city" id="city"><span id="country"></span></div>
+              <div class="city" id="city"><span class="country" id="country"></span></div>
               </div>
-            
                 <div class="time" id="time">as of 10:30 <span id="am-pm">pm</span>
               </div>
               
