@@ -1,3 +1,5 @@
+//clock and day
+
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -19,24 +21,13 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+
+ let displayDate= `${day} ${hours}:${minutes}`;
+
+ return displayDate;
 }
 
-function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
-  let day = date.getDay();
-  let days = [
-    "Sundya",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-
-  return days[day];
-}
+//display temperature of searched city
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -54,10 +45,33 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
-  dateElement.innerHTML = formatDate(response.data.time);
+  let dateElement = document.querySelector("#date");
+  dateElement.innerHTML = formatDate(date);
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `https://shecodes-assets.s3.amazonaws.com/api/weather/${response.data.condition.icon}.png`
+  );
+
+  iconElement.setAttribute("alt", response.data.condition.icon);
 }
 
-let apiKey = "37e74cb00c288f7eo2938f4t06eaf3b2";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Houston&key=${apiKey}&units=metric`;
+//find city to displayTemperature
 
-axios.get(apiUrl).then(displayTemperature);
+function search(city) {
+  let apiKey = "37e74cb00c288f7eo2938f4t06eaf3b2";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+//search engine
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
