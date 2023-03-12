@@ -21,10 +21,7 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-
- let displayDate= `${day} ${hours}:${minutes}`;
-
- return displayDate;
+  return `${day} ${hours}:${minutes}`;
 }
 
 //display temperature of searched city
@@ -46,7 +43,7 @@ function displayTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
   let dateElement = document.querySelector("#date");
-  dateElement.innerHTML = formatDate(date);
+  dateElement.innerHTML = formatDate(response.data.time*1000);
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
@@ -54,7 +51,7 @@ function displayTemperature(response) {
     `https://shecodes-assets.s3.amazonaws.com/api/weather/${response.data.condition.icon}.png`
   );
 
-  iconElement.setAttribute("alt", response.data.condition.icon);
+  iconElement.setAttribute("alt", response.data.condition.description);
 }
 
 //find city to displayTemperature
@@ -75,3 +72,6 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+
+search("Houston");
