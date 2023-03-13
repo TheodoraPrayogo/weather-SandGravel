@@ -46,10 +46,7 @@ function displayTemperature(response) {
   dateElement.innerHTML = formatDate(response.data.time*1000);
 
   let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute(
-    "src",
-    `https://shecodes-assets.s3.amazonaws.com/api/weather/${response.data.condition.icon}.png`
-  );
+  iconElement.setAttribute("src", `${response.data.condition.icon_url}`);
 
   iconElement.setAttribute("alt", response.data.condition.description);
 }
@@ -74,4 +71,4 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 
-search("Houston");
+search ("Houston");

@@ -39,7 +39,7 @@
               </div>
               <div class="col-3">
                 <input
-                  type="submit"
+                  type="button"
                   value="Search"
                   class="btn btn-primary w-100"
                 />
@@ -58,13 +58,11 @@
       <div class="current-info">
         <div class="row">
           <div class="col-6">
-            <div class="date">
-              <div class="float-left" id="temperature">
-                <span class="units"
-                    ><a href="#" id="celsius-link" class="active">°C</a> |
-                    <a href="#" id="fahrenheit-link">°F</a></span
-                  >
-              </div>
+          <div class="date">
+              <div class="weather-temperature" id="temperature"></div>
+                
+                <span class="units"  id="celsius"></a>°C
+              
 
               <div class="current-days" id="date">Monday, March 3</div>
               <div class="others">
@@ -83,7 +81,7 @@
             <div class="place">
               <div class="city" id="city"><span class="country" id="country"></span></div>
               </div>
-                <div class="time" id="time"> <span id="am-pm"></span>
+                <div class="time" id="time"> 
               </div>
               
               <img src="" alt="Clear" id="icon"/>
