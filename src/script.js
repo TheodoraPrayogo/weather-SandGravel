@@ -21,8 +21,12 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+  return `Last updated: ${day}, ${hours}:${minutes}`;
 }
+
+
+
+
 
 //display temperature of searched city
 
@@ -42,8 +46,9 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
-  let dateElement = document.querySelector("#date");
-  dateElement.innerHTML = formatDate(response.data.time*1000);
+
+  let timeElement = document.querySelector("#date");
+  timeElement.innerHTML = formatDate(response.data.time*1000);
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `${response.data.condition.icon_url}`);
