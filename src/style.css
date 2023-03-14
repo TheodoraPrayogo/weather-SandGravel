@@ -22,12 +22,6 @@ header {
  
 }  
 
-.weather-temperature .units {
-  position: relative;
-  margin-left: 80px;
-  padding-top: -40px;
-}
-
 
 #city-input {
  margin-left:100px;
@@ -39,10 +33,10 @@ header {
 }
 
 .current-info {
+  display:grid;
   color: white;
   border: 1px solid white;
   border-radius: 15px;
-  display: block;
   margin: 0 auto;
   max-width: 600px;
   box-sizing: border-box;
@@ -50,6 +44,15 @@ header {
   opacity: 0.8;
   padding: 20px;
 }
+
+.units {
+  position: relative;
+  margin-left: 70px;
+  margin-top: -2550px;
+  
+}
+
+
 
 .weather-app-wrapper {
   max-width: 600px;
@@ -85,11 +88,12 @@ li {
   padding-top:10px;
 }
 
-.description:first-letter {
+#description:first-letter {
   text-transform: capitalize;
 }
 
 #icon {
   height: 100px;
   width: 100px;
+
 }
